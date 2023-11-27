@@ -16,6 +16,7 @@ variable "vpc_cidr_block" {
 variable "number_of_subnets_required" {
     description = "number of subnets(public/private) to create"
     type = number
+    default = 2
     validation {
       condition = var.number_of_subnets_required == 2 || var.number_of_subnets_required == 3
       error_message = "subnet can be spanned to two or three only"
