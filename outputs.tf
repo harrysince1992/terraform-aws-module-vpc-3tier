@@ -9,3 +9,11 @@ output "vpc_cidr_block" {
 output "present_vpcs" {
     value = data.aws_vpcs.all_vpcs.ids
 }
+
+output "private_subnet_ids" {
+    value = aws_subnet.private_subnet[*].id
+}
+
+output "public_subnet_ids" {
+    value = aws_subnet.public_subnet[*].id
+}

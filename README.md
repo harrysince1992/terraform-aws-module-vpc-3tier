@@ -22,3 +22,5 @@ OUTPUTS:
 1. vpc_id: created VPC's ID
 2. vpc_cidr_block: created VPC's CIDR block
 3. present_vpcs: Total created VPC's IDs in the chosen region
+4. private_subnet_ids: List of private subnet IDs created
+5. public_subnet_ids: List of public subnet IDs created
