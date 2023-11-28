@@ -11,9 +11,9 @@ output "present_vpcs" {
 }
 
 output "private_subnet_ids" {
-    value = aws_subnet.private_subnet[*].id
+    value = local.private_subnet_IDs
 }
 
 output "public_subnet_ids" {
-    value = aws_subnet.public-subnet[*].id
+    value = local.public_subnet_IDs
 }

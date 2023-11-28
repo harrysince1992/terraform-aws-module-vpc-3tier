@@ -6,6 +6,9 @@ locals {
     private_az_cidr_map = zipmap(local.azs, local.subnets_cidr[0])
     public_az_cidr_map = zipmap(local.azs, local.subnets_cidr[1])
     env_val = "${var.app}-${terraform.workspace}"
+
+    private_subnet_IDs = [ for az in aws_subnet.private_subnet: az.id ]
+    public_subnet_IDs = [ for az in aws_subnet.public-subnet: az.id ]
 }
 
 # Create a VPC first
